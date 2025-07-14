@@ -1,6 +1,6 @@
 <!-- kiichain Logo -->
 <p align="center">
-  <img src="https://pbs.twimg.com/profile_images/1800553180083666944/zZe128CW.jpg" alt="kiichain Logo" width="150"/>
+  <img src="https://pbs.twimg.com/profile_images/1800553180083666944/zZe128CW.jpg" alt="kiichain Logo" width="450"/>
 </p>
 
 # OneNov Kiichain Validator Guide
