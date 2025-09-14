@@ -64,13 +64,11 @@ Step 4: Initialize Node and Download Genesis
 
 ```bash
 kiichaind init YOUR_NODE_NAME --chain-id oro_1336-1
+```
 
-# Download genesis file (replace with official URL)
-curl -fsSL https://YOUR_OFFICIAL_GENESIS_URL/genesis.json > $HOME/.kiichain/config/genesis.json
-
-# Verify genesis checksum (replace with official checksum)
-sha256sum $HOME/.kiichain/config/genesis.json
-# Should match: OFFICIAL_GENESIS_CHECKSUM
+# Download official genesis file
+```
+curl -fsSL https://raw.githubusercontent.com/KiiChain/testnets/refs/heads/main/testnet_oro/genesis.json > $HOME/.kiichain/config/genesis.json
 ```
 
 Step 5: Configure Peers and Seeds
