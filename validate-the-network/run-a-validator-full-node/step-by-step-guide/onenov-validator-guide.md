@@ -8,14 +8,15 @@ System Requirements
 
 These requirements are for a mainnet validator node with default pruning settings. Archive nodes will require significantly more storage.
 
-Component Minimum Recommended
-OS Ubuntu 20.04 Ubuntu 22.04 LTS
-CPU 4 Cores 8+ Cores
-RAM 8GB 16GB+
-Storage 500GB SSD/NVMe 1TB SSD/NVMe
-Network 10Mbps 100Mbps+
-Pruning Default Default/Everything
-Indexer Off Off
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| OS | Ubuntu 20.04 | Ubuntu 22.04 LTS |
+| CPU | 4 Cores | 8+ Cores |
+| RAM | 8GB | 16GB+ |
+| Storage | 500GB SSD/NVMe | 1TB SSD/NVMe |
+| Network | 10Mbps | 100Mbps+ |
+| Pruning | Default | Default/Everything |
+| Indexer | Off | Off |
 
 Note: NVMe SSD is strongly recommended for better I/O performance. Ensure accurate time synchronization using chrony for consensus correctness.
 
