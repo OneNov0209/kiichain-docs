@@ -32,15 +32,36 @@ sudo apt install git curl build-essential make jq gcc chrony lz4 tmux unzip bc -
 Step 2: Install Go (Verified)
 
 ```bash
-ver="1.24.5" && \
-cd $HOME && \
-wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
-sudo rm -rf /usr/local/go && \
-sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" && \
-rm "go$ver.linux-amd64.tar.gz" && \
-echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile && \
-source ~/.bash_profile && \
+GO_VERSION="1.22.3"
+cd $HOME
+
+# Hapus previous install
+rm -rf $HOME/go
+sudo rm -rf /usr/local/go
+
+# Download dan verify checksum
+curl -fsSLO "https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz"
+curl -fsSLO "https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz.sha256"
+sha256sum -c "go${GO_VERSION}.linux-amd64.tar.gz.sha256" || exit 1
+
+# Install
+sudo tar -C /usr/local -xzf "go${GO_VERSION}.linux-amd64.tar.gz"
+
+# Setup environment (hanya jika belum ada)
+if ! grep -q '/usr/local/go/bin' $HOME/.profile; then
+    cat <<'EOF' >>$HOME/.profile
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+EOF
+fi
+
+# Apply dan test
+source $HOME/.profile
 go version
+
+# Cleanup
+rm "go${GO_VERSION}.linux-amd64.tar.gz" "go${GO_VERSION}.linux-amd64.tar.gz.sha256"
 ```
 
 Step 3: Build Kiichain
