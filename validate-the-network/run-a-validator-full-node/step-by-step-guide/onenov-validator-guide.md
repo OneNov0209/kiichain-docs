@@ -47,7 +47,7 @@ sha256sum -c "go${GO_VERSION}.linux-amd64.tar.gz.sha256" || exit 1
 # Install
 sudo tar -C /usr/local -xzf "go${GO_VERSION}.linux-amd64.tar.gz"
 
-# Setup environment (hanya jika belum ada)
+# Setup environment (only if there isn't one yet)
 if ! grep -q '/usr/local/go/bin' $HOME/.profile; then
     cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
