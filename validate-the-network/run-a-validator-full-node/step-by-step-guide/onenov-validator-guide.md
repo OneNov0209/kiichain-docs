@@ -32,18 +32,14 @@ sudo apt install git curl build-essential make jq gcc chrony lz4 tmux unzip bc -
 Step 2: Install Go (Verified)
 
 ```bash
-GO_VERSION=1.23.1
-cd $HOME
-curl -fsSLO https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz
-curl -fsSLO https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz.sha256
-sha256sum -c go${GO_VERSION}.linux-amd64.tar.gz.sha256
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz
-grep -q '/usr/local/go/bin' $HOME/.profile || cat <<'EOF' >>$HOME/.profile
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-EOF
-source $HOME/.profile
+ver="1.24.5" && \
+cd $HOME && \
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
+sudo rm -rf /usr/local/go && \
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" && \
+rm "go$ver.linux-amd64.tar.gz" && \
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile && \
+source ~/.bash_profile && \
 go version
 ```
 
