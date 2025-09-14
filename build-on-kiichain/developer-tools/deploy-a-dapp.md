@@ -188,7 +188,7 @@ npm run start
 
 If everything is set up properly, your application should start, and the following screen will appear:
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt="" width="478"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22) (1).png" alt="" width="478"><figcaption></figcaption></figure>
 
 ### Testing the Wallet Functionality
 
@@ -212,15 +212,15 @@ To deploy your decentralized application (dApp) using Firebase Hosting, follow t
     * Visit the [Firebase Console](https://console.firebase.google.com/).
     * Click on **"Create a project"**.
 
-    <figure><img src="../../.gitbook/assets/image (23).png" alt="" width="375"><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (23) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
     * Name your project and disable Google Analytics (optional for this tutorial).
 
-    <figure><img src="../../.gitbook/assets/image (24).png" alt="" width="375"><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (24) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
     * Click **"Continue"** once the project is ready.
 
-    <figure><img src="../../.gitbook/assets/image (25).png" alt="" width="337"><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (25) (1).png" alt="" width="337"><figcaption></figcaption></figure>
 2.  **Access Firebase Hosting**:
 
     * In the left menu, go to **Build** → **Hosting**.

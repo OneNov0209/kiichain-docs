@@ -11,7 +11,3 @@ Connect your Keplr or MetaMask wallet to the explorer app to stake KII into a va
 ### **Web Wallets**
 
 Connect to our web wallet using Keplr or Metamask.
-
-### **Mobile Wallets**
-
-Download and set up our Kii Mobile wallet from the App Store or Google Play. Mobile apps allow users to send and receive KII and stake their KII to a validator of their choice.&#x20;

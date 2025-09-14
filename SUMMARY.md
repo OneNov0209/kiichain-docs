@@ -2,8 +2,8 @@
 
 ## Learn
 
-* [What is KIIEX?](README.md)
-* [What is KiiChain?](<README (1).md>)
+* [What is Kii?](README.md)
+* [What is KiiChain?](learn/readme-1.md)
 * [KiiChain](learn/kiichain/README.md)
   * [Vision of KiiChain](learn/kiichain/vision-of-kiichain.md)
   * [Blockchain Features](learn/kiichain/blockchain-features.md)
@@ -30,12 +30,12 @@
 
 ## CONNECT TO KIIEX
 
-* [Set up your KIIEX Account](connect-to-kiiex/set-up-your-kiiex-account/README.md)
+* [Set up your Kii Account](connect-to-kiiex/set-up-your-kiiex-account/README.md)
   * [Upgrade your Account to Enterprise Level](connect-to-kiiex/set-up-your-kiiex-account/upgrade-your-account-to-enterprise-level.md)
 * [Authenticate with API Key](connect-to-kiiex/authenticate-with-api-key.md)
 * [Stablecoin FX Quick Start](connect-to-kiiex/stablecoin-fx-quick-start/README.md)
   * [Swap USDT to COPM with UI](connect-to-kiiex/stablecoin-fx-quick-start/swap-usdt-to-copm-with-ui.md)
-* [KIIEX API's](connect-to-kiiex/kiiex-apis/README.md)
+* [Kii API's](connect-to-kiiex/kiiex-apis/README.md)
   * ```yaml
     props:
       models: true
@@ -92,6 +92,7 @@
   * [EVM](build-on-kiichain/modules/evm.md)
   * [Rewards](build-on-kiichain/modules/rewards.md)
   * [Oracle](build-on-kiichain/modules/oracle.md)
+  * [Fee Abstraction](build-on-kiichain/modules/fee-abstraction.md)
 
 ***
 

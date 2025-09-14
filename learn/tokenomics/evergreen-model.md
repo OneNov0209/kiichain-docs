@@ -1,7 +1,7 @@
 ---
 description: >-
-  KII has designed a sustainable rewards model where network participants can
-  reap the rewards of the Kii Global suite of products.
+  KiiChain has designed a sustainable rewards model where network participants
+  can reap the rewards of the Kii suite of products.
 ---
 
 # Evergreen Model

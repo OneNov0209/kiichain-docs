@@ -1,13 +1,13 @@
 ---
 description: >-
-  This guide explains how to swap any stablecoin using our KIIEX API. It covers
+  This guide explains how to swap any stablecoin using our Kii API. It covers
   retrieving balances, checking the current exchange rate, sending the order and
   verifying execution.
 ---
 
 # Stablecoin FX Quick Start
 
-**Requirements to be able to trade stablecoins on KIIEX, via dashboard or API:**
+**Requirements to be able to trade stablecoins on Kii, via dashboard or API:**
 
 * Have a user&#x20;
 * Have an account level 1 at least (to upgrade from level 0 to level 1, you need to complete our KYC verification inside your user settings)&#x20;
@@ -37,7 +37,7 @@ For this example will assume a goal and specify what to do in order, also we'll 
 
 These are the prerequisites for the step-by-step guide.
 
-1. Create your KIIEX account:
+1. Create your Kii account:
    1. Go to [https://kiiex.io/](https://kiiex.io/) and click on login, and create your user
       1. You can also follow our guide on [set-up-your-kiiex-account](../set-up-your-kiiex-account/ "mention")
 2. Update your account from level 0 to level 1 by following our KYC flow to be able to swap
@@ -74,51 +74,51 @@ These are the steps to fully create a swap and withdraw it:
 ### Authenticate your User via API
 
 {% openapi-operation spec="swap-kiiex" path="/AuthenticateUser" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI swap-kiiex](https://gitbook-x-prod-openapi.4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/raw/35214ac23d9928896910cf1474dfa48f9fd7d2585cd1675c58f2332c1cf63386.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20250825%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250825T191814Z&X-Amz-Expires=172800&X-Amz-Signature=558c98e789e7f205dbe4ae09bbaf5b65a0b6059dabdea4af748073b5d4cc9f86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 ### Create Deposit
 
 {% openapi-operation spec="swap-kiiex" path="/CreateDepositTicket" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI swap-kiiex](https://gitbook-x-prod-openapi.4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/raw/35214ac23d9928896910cf1474dfa48f9fd7d2585cd1675c58f2332c1cf63386.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20250825%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250825T191814Z&X-Amz-Expires=172800&X-Amz-Signature=558c98e789e7f205dbe4ae09bbaf5b65a0b6059dabdea4af748073b5d4cc9f86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 ### Get Account Balances
 
 {% openapi-operation spec="swap-kiiex" path="/GetAccountPositions" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI swap-kiiex](https://gitbook-x-prod-openapi.4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/raw/35214ac23d9928896910cf1474dfa48f9fd7d2585cd1675c58f2332c1cf63386.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20250825%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250825T191814Z&X-Amz-Expires=172800&X-Amz-Signature=558c98e789e7f205dbe4ae09bbaf5b65a0b6059dabdea4af748073b5d4cc9f86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 ### Get Current Rate
 
 {% openapi-operation spec="swap-kiiex" path="/GetLevel1SummaryMin" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI swap-kiiex](https://gitbook-x-prod-openapi.4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/raw/35214ac23d9928896910cf1474dfa48f9fd7d2585cd1675c58f2332c1cf63386.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20250825%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250825T191814Z&X-Amz-Expires=172800&X-Amz-Signature=558c98e789e7f205dbe4ae09bbaf5b65a0b6059dabdea4af748073b5d4cc9f86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 ### Create a SWAP
 
 {% openapi-operation spec="swap-kiiex" path="/SendOrder" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI swap-kiiex](https://gitbook-x-prod-openapi.4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/raw/35214ac23d9928896910cf1474dfa48f9fd7d2585cd1675c58f2332c1cf63386.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20250825%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250825T191814Z&X-Amz-Expires=172800&X-Amz-Signature=558c98e789e7f205dbe4ae09bbaf5b65a0b6059dabdea4af748073b5d4cc9f86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 ### Get SWAP status
 
 {% openapi-operation spec="swap-kiiex" path="/GetOrderStatus" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI swap-kiiex](https://gitbook-x-prod-openapi.4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/raw/35214ac23d9928896910cf1474dfa48f9fd7d2585cd1675c58f2332c1cf63386.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20250825%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250825T191814Z&X-Amz-Expires=172800&X-Amz-Signature=558c98e789e7f205dbe4ae09bbaf5b65a0b6059dabdea4af748073b5d4cc9f86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="swap-kiiex" path="/GetTradesHistory" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI swap-kiiex](https://gitbook-x-prod-openapi.4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/raw/35214ac23d9928896910cf1474dfa48f9fd7d2585cd1675c58f2332c1cf63386.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20250825%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250825T191814Z&X-Amz-Expires=172800&X-Amz-Signature=558c98e789e7f205dbe4ae09bbaf5b65a0b6059dabdea4af748073b5d4cc9f86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 ### Create a Withdrawal
 
 {% openapi-operation spec="swap-kiiex" path="/CreateWithdrawTicket" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI swap-kiiex](https://gitbook-x-prod-openapi.4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/raw/35214ac23d9928896910cf1474dfa48f9fd7d2585cd1675c58f2332c1cf63386.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20250825%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250825T191814Z&X-Amz-Expires=172800&X-Amz-Signature=558c98e789e7f205dbe4ae09bbaf5b65a0b6059dabdea4af748073b5d4cc9f86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 ### Check Withdrawal status
 
 {% openapi-operation spec="swap-kiiex" path="/GetWithdrawTickets" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI swap-kiiex](https://gitbook-x-prod-openapi.4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/raw/35214ac23d9928896910cf1474dfa48f9fd7d2585cd1675c58f2332c1cf63386.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20250825%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250825T191814Z&X-Amz-Expires=172800&X-Amz-Signature=558c98e789e7f205dbe4ae09bbaf5b65a0b6059dabdea4af748073b5d4cc9f86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
