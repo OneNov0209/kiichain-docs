@@ -198,6 +198,7 @@ Start the service:
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable --now kiichaind
+sudo systemctl start kiichaind
 journalctl -u kiichaind -f -o cat
 ```
 
