@@ -247,20 +247,17 @@ journalctl -u kiichaind -f
 
 ---
 
-Optional: State Sync (Fast Sync)
-
-To reduce synchronization time, you can use state sync. Replace with actual trust height and hash from a trusted RPC:
-
-```bash
 TRUST_HEIGHT=1000000
 TRUST_HASH="ABCDEF123456..."
-SYNC_RPC="https://rpc.kiichain.com:443"
+TRUST_PERIOD="168h0m0s"   # ~7 days; adjust to match your RPC's pruning/window
+SYNC_RPC="https://rpc.uno.sentry.testnet.v3.kiivalidator.com:443"
 
-sed -i 's|^enable *=.*|enable = true|' $HOME/.kiichain/config/config.toml
-sed -i "s|^trust_height *=.*|trust_height = $TRUST_HEIGHT|" $HOME/.kiichain/config/config.toml
-sed -i "s|^trust_hash *=.*|trust_hash = \"$TRUST_HASH\"|" $HOME/.kiichain/config/config.toml
-sed -i "s|^rpc_servers *=.*|rpc_servers = \"$SYNC_RPC,$SYNC_RPC\"|" $HOME/.kiichain/config/config.toml
-```
+# Safely edit only the [statesync] section
+sed -i '/^\[statesync\]/,/^\[/{s/^enable *=.*/enable = true/}' $HOME/.kiichain/config/config.toml
+sed -i "/^\[statesync\]/,/^\[/{s/^rpc_servers *=.*/rpc_servers = \"${SYNC_RPC},${SYNC_RPC}\"/}" $HOME/.kiichain/config/config.toml
+sed -i "/^\[statesync\]/,/^\[/{s/^trust_height *=.*/trust_height = ${TRUST_HEIGHT}/}" $HOME/.kiichain/config/config.toml
+sed -i "/^\[statesync\]/,/^\[/{s/^trust_hash *=.*/trust_hash = \"${TRUST_HASH}\"/}" $HOME/.kiichain/config/config.toml
+sed -i "/^\[statesync\]/,/^\[/{s/^trust_period *=.*/trust_period = \"${TRUST_PERIOD}\"/}" $HOME/.kiichain/config/config.toml
 
 Note: State sync must be configured before starting the node for the first time.
 
